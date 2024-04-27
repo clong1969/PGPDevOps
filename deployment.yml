@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+    name: abctech-app
+spec:
+    replicas: 2
+    minReadySeconds: 45
+    strategy:
+        type: RollingUpdate
+        rollingUpdate:
+            maxUnavailable: 1
+            maxSurge: 2
+    selector:
+        matchLabels:
+            app: abctech-app
+    template:
+        metadata:
+            labels:
+                app: abctech-app
+        spec:
+            containers:
+                - image: clong1969/abctech:docker_tag
+                  name: app
+
+

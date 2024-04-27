@@ -1,0 +1,6 @@
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: Create a Deployment by reading the definition from a local file 
+    command: kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f deployment.yml
+    command: kubectl --kubeconfig=/etc/kubernetes/admin.conf apply -f service.yml
