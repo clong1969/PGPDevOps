@@ -1,7 +1,3 @@
-steps{
-              git (branch: 'main', url:"https://github.com/clong1969/PGPDevOps.git"),
-                credentialsID:'github
-
 pipeline{
     environment {
     registry = "clong1969/abctech"
@@ -20,7 +16,9 @@ pipeline{
         stage ('CloneRepo')
         {
             steps{
-              git (branch: 'main', url:"https://github.com/clong1969/PGPDevOps.git")
+                     
+              git (branch: 'main', url:'https://github.com/clong1969/PGPDevOps.git')
+                
             }
         }
         
