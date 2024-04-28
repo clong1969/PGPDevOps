@@ -3,40 +3,27 @@ pipeline{
     registry = "clong1969/abctech"
     registryCredential = 'dockerhub'
     }
-    
     tools{
-        // what tool version to use for build stages
         maven 'mymaven'
     }
-    
     agent any
-    
     stages{
-        
         stage ('CloneRepo')
         {
-            steps{
-                     
-              git (branch: 'main', url:'https://github.com/clong1969/PGPDevOps.git')
-                
+            steps{        
+              git (branch: 'main', url:'https://github.com/clong1969/PGPDevOps.git')   
             }
         }
-        
         stage ('Compile')
         {
             steps{
-                
-             sh  'mvn compile'
-                
+             sh  'mvn compile' 
             }
         }
-        
         stage ('Test')
         {
-            steps{
-                
+            steps{     
              sh  'mvn test'
-                
             }
         post{
             success{
@@ -44,7 +31,6 @@ pipeline{
             }
         }
         }
-        
         stage('Package')
         {
             steps{
