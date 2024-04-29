@@ -22,4 +22,15 @@ spec:
                 - image: clong1969/abctech:docker_tag
                   name: app
 
-
+---------------
+apiVersion: v1
+kind: Service
+metadata:
+    name: abctech-service
+spec:
+    type: NodePort
+    selector:
+        app: abctech-app
+    ports:
+        - port: 80 #cluster port
+          targetPort: 8080 #container image port
