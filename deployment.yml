@@ -21,7 +21,6 @@ spec:
             containers:
                 - image: clong1969/abctech:docker_tag
                   name: app
-----
 
 kind: Service
 apiVersion: v1
