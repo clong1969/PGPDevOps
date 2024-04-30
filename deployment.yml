@@ -21,10 +21,10 @@ spec:
             containers:
                 - image: clong1969/abctech:docker_tag
                   name: app
+----
 
----------------
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
     name: abctech-service
 spec:
