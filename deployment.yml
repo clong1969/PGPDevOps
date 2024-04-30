@@ -19,7 +19,7 @@ spec:
                 app: abctech-app
         spec:
             containers:
-                - image: clong1969/abctech:latest
+                - image: clong1969/abctech:56
                   name: app
 
 kind: Service
