@@ -19,7 +19,7 @@ spec:
                 app: abctech-app
         spec:
             containers:
-                - image: clong1969/abctech:docker_tag
+                - image: clong1969/abctech:latest
                   name: app
 
 kind: Service
