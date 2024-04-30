@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
     name: abctech-app
 spec:
-    replicas: 2
+    replicas: 3
     minReadySeconds: 45
     strategy:
         type: RollingUpdate
