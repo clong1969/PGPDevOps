@@ -4,7 +4,7 @@
         - name: Build an image and push it to a private repo
           community.docker.docker_image:
               build:
-                  path: "PGPDevOps"
+                  path: docker.io/clong1969/abctech
               name: docker.io/clong1969/abctech
               #tag: test
               push: true
